@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Help & Services - TwoStep</title>
+  <link rel="shortcut icon" href="logos/TWOSTEP S.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <style>
+    #listBox{
+      border: 2px solid black;
+      border-radius: 5px;
+      max-width: 70vw;
+      margin: auto;
+      font-weight: bold;
+    }
+    .qbox{
+      border: 2px solid #61b3e4;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 20px;
+    }
+    h1{
+      font-size: 40px;
+    }
+    h2{
+      font-size: 30px;
+    }
+    .page{
+      width: 40%;
+      height: auto;
+      border: 10px solid black;
+      border-radius: 15px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  </style>
+  <script>
+    document.onclick = () => applyCursorRippleEffect(event);
+
+    function applyCursorRippleEffect(e) {
+       const ripple = document.createElement("div");
+      
+       ripple.className = "ripple";
+       document.body.appendChild(ripple);
+    
+      ripple.style.left = `${e.clientX}px`;
+      ripple.style.top = `${e.clientY}px`; 
+       ripple.style.animation = `ripple-effect .4s  linear`;
+       ripple.onanimationend = () => {
+         document.body.removeChild(ripple);
+         
+       }
+      
+    }
+    
+    // extra and optional part:
+    
+    const all = document.body.getElementsByTagName("*");
+    for (var i = 0;  i < all.length; ++i) {
+      all[i].onclick = (event) => event.stopPropagation();
+    }
+  </script>
+</head>
+
+<body style="margin:0;padding:0">
+  <header class="header-wrapper">
+    <a href="index.html"><img src="logos/TWOSTEP Logo.png" id="logo" alt="twosteptravel"></p></a>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <break2 id="upper"> </break2>
+  <div id="sec2">
+    
+    <h1> Help and Services </h1>
+    <div id="listBox">
+      <p><a href="#q1">How do I recover my account info?</a></p>
+      <p><a href="#q2">How do I change my payment method?</a></p>
+      <p><a href="#q3">How do I change the app language?</a></p>
+      <p><a href="#q4">How do I use the app?</a></p>
+    </div>
+    <div class="qbox" id="q1">
+      <h1>How do I recover my account info?</h1>
+      <h2>Recovering my password</h2>
+      <p>If you forgot your password, click on the "Forgot Password" on the login page, and we will send you an email that redirects to a page where you can reset your password.</p>
+      <div style="display: flex; justify-content: space-between;">
+        <img src="pages/pwd.jpeg" class="page"/>
+      </div>
+      <h2>Changing my password</h2>
+      <p>You can change your password through the settings page. Type in the old password, new password, confirm the new password, hit save, and you should be all set.</p>
+      <div style="display: flex; justify-content: space-between;">
+        <img src="pages/settings.jpeg" class="page"/>
+        <img src="pages/change.jpeg" class="page"/>
+      </div>
+    </div>
+    <div class="qbox" id="q2">
+      <h1>How do I change my payment method?</h1>
+      <h2>Changing card information</h2>
+      <p>Payment methods can be changed in the settings page under the "Change Payment Plan" tab. In there, you will be able to change the credit card or PayPal account linked to your account as well as the payment subscription plan.</p>
+      <div style="display: flex; justify-content: space-between;">
+        <img src="pages/settings.jpeg" class="page"/>
+        <img src="pages/payment.jpeg" class="page"/>
+      </div>
+      <h2>Refunds</h2>
+      <p>If a refund is needed, please contact us at <a href="mailto:contact.twostep@gmail.com">contact.twostep@gmail.com</a> and we will try to respond ASAP.</p>
+    </div>
+    <div class="qbox" id="q3">
+      <h1>How do I change the app language?</h1>
+      <h2>Interface language</h2>
+      <p>When you create your account, you will be prompted to select your app's language. Once selected, this can be changed in the settings page.</p>
+      <h2>Translator language</h2>
+      <p>Both text/voice and camera translators have their output language set to the national language of the arriving airport. The input language is synced with the interface language which can be changed in the settings page.</p>
+      <div style="display: flex; justify-content: space-between;">
+        <img src="pages/speech.jpeg" class="page"/>
+        <img src="pages/cam.jpeg" class="page"/>
+      </div>
+    </div>
+    <div class="qbox" id="q4">
+      <h1>How do I use the app?</h1>
+      <h2>Tutorial</h2>
+      <video width="50%" height="auto" controls>
+        <source src="pages/tutorial.MP4" type="video/MP4"/>
+        Your browser does not support the video tag.
+      </video>
+      <h2>Airport map</h2>
+      <p>Zoom in on a specific terminal to view terminal details. The map will display the locations of gates and restaurants throughout the terminal.</p>
+      <h2>Wait time estimator</h2>
+      <p>Approximate wait time for security lines. Shows current wait time as well as average wait times at certain hours.</p>
+      <h2>Speech translator</h2>
+      <p>The translator language will be set between the app interface language and airport language. Click on "Start Recording", then speak into the phone. Once done, click on "Stop Recording" and the app will translate. It may take up to 20 seconds to load in the translation.</p>
+      <h2>Camera translator</h2>
+      <p>Take a photo of a sign or text or select a photo from your camera roll. The app will then translate the text.</p>
+      <h2>FlyMate AI</h2>
+      <p>Type a question to the AI. It should respond in at most 20 seconds. If the chatbot doesn't respond, check your wifi or cellular service.</p>
+    </div>
+    <hr>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <b></b><a style="padding-left:10px; padding-right:10px;">•</a></b>
+      <a href="tos.html">Terms of Service</a>
+    </p>
+    <p>Copyright © 2023 TwoStep - All Rights Reserved.</p>
+    <p style="padding-bottom:15px">Made with love <span style="font-size:100%;color:#61b3e4;">&hearts;</span> by 5 entrepreneurs <a href="https://launchx.com" target="_blank">@LaunchX</a></p>
+  </div>
+</body>
+
+</html>

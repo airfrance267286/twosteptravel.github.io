@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--Copyright © 2023 TwoStep - All Rights Reserved.-->
+<html>
+
+<head>
+  <title>TwoStep</title>
+  <link rel="shortcut icon" href="logos/TWOSTEP S.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script>
+    document.onclick = () => applyCursorRippleEffect(event);
+
+    function applyCursorRippleEffect(e) {
+       const ripple = document.createElement("div");
+      
+       ripple.className = "ripple";
+       document.body.appendChild(ripple);
+    
+      ripple.style.left = `${e.clientX}px`;
+      ripple.style.top = `${e.clientY}px`; 
+       ripple.style.animation = `ripple-effect .4s  linear`;
+       ripple.onanimationend = () => {
+         document.body.removeChild(ripple);
+         
+       }
+      
+    }
+    
+    // extra and optional part:
+    
+    const all = document.body.getElementsByTagName("*");
+    for (var i = 0;  i < all.length; ++i) {
+      all[i].onclick = (event) => event.stopPropagation();
+    }
+  </script>
+</head>
+
+<body style="margin:0;padding:0">
+  <header class="header-wrapper">
+    <a href="index.html"><img src="logos/TWOSTEP Logo.png" id="logo" alt="twosteptravel"></p></a>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <break2 id="upper"> </break2>
+  <div id="sec1">
+    <h1 style="font-size: 80px"><a id="quick">Quick.</a> <a id="simple">Simple.</a> <a id="convenient">Convenient.</a></h1>
+    
+    <h2> Simplifying 
+      <a style="color:#61b3e4" class="typewrite" data-period="2000" data-type='[ "Security Lines", "Airport Navigation", "Ground Transportation", "Your Journey" ]'
+        <span class="wrap"></span>
+      </a>
+    </h2>
+    <script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+    
+    <p>Get Ready! Release Day is Coming Soon!</p>
+    <!---<a href="index.html"><img src="https://texttofloss.com/wp-content/uploads/2021/01/App-Store-Button-transparent.png" id="appstore" alt="appstore"></a>--->
+    <a href="index.html"><img src="https://myreps.in/images/coming_soon_appstore.png" id="appstore" alt="appstore"></a>
+    <br/>
+    <img src="assets/phone.gif" alt="Phone" style="width:60%;height:auto;">
+    <div style="padding-top: 60px; padding-bottom: 60px;">
+      <h2>Traveling Has Never Been This Easy</h2>
+      <p style="max-width: 900px; margin:auto;">Utilizing advanced technology and intuitive design, our travel convenience app revolutionizes the way you plan, navigate the airport, and experience your journey.</p>
+    </div>
+    <p><img
+        src="assets/websitebanner.png"
+        style="width: 90vw; border-radius: 20px;"
+        alt="placeholder"></p>
+  </div>
+  <div class="center" style="padding-top: 60px;">
+    <h2>We Provide Our Customers With Value</h2>
+    <div class="features">
+      <button id="nav" class="infeature" disabled>
+        <span style="top:100%;">2D Navigation Map</span>
+      </button>
+      <button id="trans" class="infeature" disabled>
+        <span style="top:100%;">Translator</span>
+      </button>
+    </div>
+    <div class="features">
+      <button id="queue" class="infeature" disabled>
+        <span style="top:100%;">Queue Estimator</span>
+      </button>
+      <button id="general" class="infeature" disabled>
+        <span style="top:100%;">General Info</span>
+      </button>
+    </div>
+    <div class="features">
+      <button id="ai" class="infeature" disabled>
+        <span style="top:100%;">FlyMate AI</span>
+      </button>
+      <button id="destinfo" class="infeature" disabled>
+        <span style="top:100%;">Destination Info</span>
+      </button>
+    </div>
+  </div>
+  <div class="center">
+    <h2>Demo</h2>
+    <video width="50%" height="auto" controls>
+      <source src="pages/demo.MP4" type="video/MP4"/>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="center">
+    <h2>Starting At</h2>
+    <p><span style="font-size: 60px;">$5.00</span> / month</p>
+  </div>
+  <div class="center">
+    <h2>Our Story</h2>
+    <p><i>"To make the most stressful part of travel quick and easy"</i></p>
+    <p style="max-width: 800px; margin:auto;">As frequent travelers, we often experienced the existing frustrations of airports. Determined to simplify the process, we created TwoStep: the app that makes the most stressful parts of travel quick and easy. Seamless navigation methods, personalized instructions, and efficient time management became our customers’ delights. Our vision is to transform the way people explore the world.</p>
+  </div>
+  <div id="sec2" class="center">
+    <h2>Meet the Team</h2>
+    <div id="team">
+      <div class="profile">
+        <p><img src="team/ada.jpeg" class="teamPhoto" alt="ada"></p>
+        <h3>Ada Ji</h3>
+        <p style="font-size: 18px;">Ada Ji is an entrepreneur who wants to bring change to the world through innovation. She has a background in engineering and physics, and loves graphic design and music. Combined with her leadership experience from leading multiple clubs, she hopes to create an impact beyond her community.</p>
+      </div>
+      <div class="profile">
+        <p><img src="team/ally.jpeg" class="teamPhoto" alt="ally"></p>
+        <h3>Ally Song</h3>
+        <p style="font-size: 18px;">Ally Song is a passionate entrepreneur that hopes to give back to her community through her works. She specializes in marketing and artistic endeavors, which are portrayed through her involvement in numerous leadership activities. She also loves music and hopes to make a significant impact on the people around her in the future.</p>
+      </div>
+      <div class="profile">
+        <p><img src="team/hardy.jpeg" class="teamPhoto" alt="hardy"></p>
+        <h3>Hardy Wen</h3>
+        <p style="font-size: 18px;">Hardy Wen is an enthusiastic entrepreneur aiming to bring value to people worldwide. Diving deep into various fields of Computer Science, with experiences in both front and backend development and AI research, he aims to create products that bring momentous changes to society. He's also a huge fan of philosophy and martial arts.</p>
+      </div>
+      <div class="profile">
+        <p><img src="team/james.jpeg" class="teamPhoto" alt="james"></p>
+        <h3>James Song</h3>
+        <p style="font-size: 18px;">James Song is an aspiring aerospace engineer and entrepreneur interested in the development of new technology, especially in the aerospace and EV fields. He has experience from being captain of the school robotics team as well as starting a Blender class for younger kids. He takes interest in model rocketry and coding games and websites.</p>
+      </div>
+      <div class="profile">
+        <p><img src="team/sameet.jpeg" class="teamPhoto" alt="sameet"></p>
+        <h3>Sameet Das</h3>
+        <p style="font-size: 18px;">Sameet Das is an aspiring entrepreneur that wants to create social change in the world. He has great amounts of business and leadership experience working in not only teams, but for established organizations as well. He aims to inspire other youth to take action in their communities, create social change, and become leading entrepreneurs.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sec3">
+    <h2>Contact Us</h2>
+    <p>Ask us a question at <a href="mailto:contact.twostep@gmail.com">contact.twostep@gmail.com</a>.</p>
+    <p>Or follow us on social media</p>
+    <p><a href="https://www.facebook.com/twosteptravel" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" class="socialMedia" alt="facebook"></a> <a href="https://www.instagram.com/twostep_travel" target="_blank"><img src="https://www.nicepng.com/png/full/356-3563301_instagram-instagram-circle-icon.png" class="socialMedia" alt="instagram"></a> <a href="https://www.linkedin.com/company/95762304/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" class="socialMedia" alt="linkedin"></a></p>
+    <hr>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <b></b><a style="padding-left:10px; padding-right:10px;">•</a></b>
+      <a href="tos.html">Terms of Service</a>
+    </p>
+    <p>Copyright © 2023 TwoStep - All Rights Reserved.</p>
+    <p style="padding-bottom:15px">Made with love <span style="font-size:100%;color:#61b3e4;">&hearts;</span> by 5 entrepreneurs <a href="https://launchx.com" target="_blank">@LaunchX</a></p>
+  </div>
+</body>
+
+</html>

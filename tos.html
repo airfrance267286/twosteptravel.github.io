@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ToS - TwoStep</title>
+  <link rel="shortcut icon" href="logos/TWOSTEP S.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script>
+    document.onclick = () => applyCursorRippleEffect(event);
+
+    function applyCursorRippleEffect(e) {
+       const ripple = document.createElement("div");
+      
+       ripple.className = "ripple";
+       document.body.appendChild(ripple);
+    
+      ripple.style.left = `${e.clientX}px`;
+      ripple.style.top = `${e.clientY}px`; 
+       ripple.style.animation = `ripple-effect .4s  linear`;
+       ripple.onanimationend = () => {
+         document.body.removeChild(ripple);
+         
+       }
+      
+    }
+    
+    // extra and optional part:
+    
+    const all = document.body.getElementsByTagName("*");
+    for (var i = 0;  i < all.length; ++i) {
+      all[i].onclick = (event) => event.stopPropagation();
+    }
+  </script>
+</head>
+
+<body style="margin:0;padding:0">
+  <header class="header-wrapper">
+    <a href="index.html"><img src="logos/TWOSTEP Logo.png" id="logo" alt="twosteptravel"></p></a>
+  </header>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector(".header-wrapper").classList.add("shadow");
+      } else {
+        document.querySelector(".header-wrapper").classList.remove("shadow");
+      }
+    });
+  </script>
+  <break2 id="upper"> </break2>
+  <div id="sec2">
+    
+    <h2> Terms of Service </h2>
+        <div style="text-align: left; padding:20px;">
+      <p>
+        Welcome to TwoStep. These Terms of Service outline the terms and conditions that govern your use of the TwoStep App. By accessing or using the TwoStep App, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please refrain from using the TwoStep App.</p>
+
+<p>1. User Responsibilities:</p>
+      <ol type="a">
+   <li>Account Information: You are responsible for maintaining the confidentiality of your account information, including your login credentials. You agree to provide accurate and updated information during registration and keep your account details secure.</li>
+   <li>Prohibited Activities: You agree not to engage in any activities that violate applicable laws, regulations, or these Terms of Service. This includes unauthorized access, tampering with the TwoStep App, or interfering with its operation.</li>
+      </ol>
+
+<p>2. Intellectual Property:</p>
+      <ol type="a">
+   <li>Ownership: The TwoStep App, including all content, features, and functionality, is owned by TwoStep or its licensors and protected by intellectual property laws. You agree not to reproduce, modify, distribute, or create derivative works based on the TwoStep App without prior written consent.</li>
+   <li>User Content: By submitting any content through the TwoStep App, you grant TwoStep a non-exclusive, worldwide, royalty-free license to use, reproduce, modify, adapt, publish, translate, and distribute the content for the purpose of providing and promoting the TwoStep App.</li>
+      </ol>
+
+<p>3. Limitations of Liability:</p>
+      <ol type="a">
+   <li>TwoStep does not endorse or guarantee the accuracy, reliability, or availability of any information, products, or services offered by third parties through the TwoStep App. Any transactions or interactions with third parties are solely between you and the third party.</li>
+      </ol>
+
+<p>4. Privacy:</p>
+      <ol type="a">
+   <li>Your privacy is important to us. Please review our <a href="privacy.html">Privacy Policy</a> to understand how we collect, use, and protect your personal information in connection with the TwoStep App.</li>
+      </ol>
+
+<p>5. Modifications and Termination:</p>
+      <ol type="a">
+   <li>TwoStep reserves the right to modify, suspend, or discontinue the TwoStep App or any part thereof at any time without prior notice.</li>
+   <li>TwoStep may terminate or suspend your access to the TwoStep App immediately, without prior notice or liability, for any reason, including if you breach these Terms of Service.</li>
+      </ol>
+
+<p>6. Severability:</p>
+      <ol type="a">
+   <li>If any provision of these Terms of Service is found to be unenforceable or invalid, such provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</li>
+      </ol>
+
+<p>7. Entire Agreement:</p>
+      <ol type="a">
+   <li>These Terms of Service constitute the entire agreement between you and TwoStep regarding the use of the TwoStep App and supersede any prior or contemporaneous agreements.</li>
+      </ol>
+
+<p>If you have any questions or concerns about these Terms of Service, please contact us at <a href="mailto:contact.twostep@gmail.com">contact.twostep@gmail.com</a>.</p>
+
+      </p>
+    </div>
+    <hr>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <b></b><a style="padding-left:10px; padding-right:10px;">•</a></b>
+      <a href="tos.html">Terms of Service</a>
+    </p>
+    <p>Copyright © 2023 TwoStep - All Rights Reserved.</p>
+    <p style="padding-bottom:15px">Made with love <span style="font-size:100%;color:#61b3e4;">&hearts;</span> by 5 entrepreneurs <a href="https://launchx.com" target="_blank">@LaunchX</a></p>
+  </div>
+</body>
+
+</html>

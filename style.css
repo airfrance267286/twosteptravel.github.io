@@ -1,0 +1,298 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+break1{
+  padding-top: 100px;
+}
+break2{
+  padding-top: 200px;
+}
+breaksm{
+  padding-top: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: SFProRoundedRegular, Montserrat, sans-serif;
+}
+p, li, ol {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+a:link {
+  color: #61b3e4;
+}
+
+/* visited link */
+a:visited {
+  color: #61b3e4;
+}
+
+@font-face {
+  font-family: SFProRoundedRegular;
+  src: url('fonts/SF-Pro-Rounded-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://img1.wsimg.com/gfonts/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+  unicode-range: U + 0460-052F, U + 1C80-1C88, U + 20B4, U + 2DE0-2DFF, U + A640-A69F, U + FE2E-FE2F;
+}
+
+/* cyrillic */
+
+header {
+  height: 80px;
+  /* 64 + 16px */
+  position: sticky;
+  -webkit-position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: white;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+
+.center{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 14px 12px -6px grey;
+  -moz-box-shadow: 0 14px 12px -6px grey;
+  box-shadow: 0 14px 12px -6px grey;
+}
+
+.wrapper {
+  height: 200vh;
+}
+
+.teamPhoto {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.socialMedia{
+  width: 50px;
+  height: auto;
+  padding: 10px;
+  transition: all 0.2s;
+}
+.socialMedia:hover{
+  width: 55px;
+  height: auto;
+  padding: 8px;
+  transition: all 0.2s;
+}
+
+input{
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  padding-left: 10px;
+}
+button{
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  height:40px;
+  width:80px;
+  text-align: center;
+  border: 1px solid #7a7a7a;
+  background-color: white;
+  color: black;
+  transition: all 0.5s;
+}
+button:hover{
+  background-color: #61b3e4;
+  color: white;
+  transition: all 0.5s;
+}
+textarea{
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  padding: 10px;
+}
+.formInput{
+  width: 570px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #7a7a7a;
+}
+.features {
+  display: flex;
+  /*Making equal spaced divs*/
+  justify-content: space-between;
+}
+.infeature{
+  text-align: center;
+  margin: 20px;
+  width: 50%;
+  min-height: 300px;
+  border: 2px solid #7a7a7a;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+#appstore{
+  margin:20px;
+  width: 200px;
+  transition: all 0.2s;
+  filter: drop-shadow(3px 3px 2px #919191);
+}
+#appstore:hover{
+  margin:17px;
+  width: 220px;
+  transition: all 0.2s;
+}
+
+#sec1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#sec2 {
+  text-align: center;
+}
+
+#sec3 {
+  text-align: center;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+  margin-top: 25px;
+  transition: all 0.2s;
+}
+
+#logo:hover {
+  height: 32px;
+  width: auto;
+  transition: all 0.2s;
+}
+
+#team {
+  display: flex;
+  /*Making equal spaced divs*/
+  justify-content: space-between;
+}
+
+.profile {
+  padding: 20px;
+  width: 20%;
+  transition: all 0.2s;
+}
+.profile:hover{
+  -webkit-box-shadow: 0 7px 12px 4px #c0c0c0;
+  -moz-box-shadow: 0 7px 12px 4px #c0c0c0;
+  box-shadow: 0 7px 12px 4px #c0c0c0;
+  transition: all 0.2s;
+}
+#nav:hover span {
+  display: none
+}
+#nav:hover:before {
+  font-size: auto;
+  content: "A 2D navigation system displaying gates, restaurants, and more important locations across terminals";
+}
+
+#trans:hover span {
+  display: none
+}
+#trans:hover:before {
+  font-size: auto;
+  content: "A text/speech-based translator system and camera-based translator system for airport signs and directions";
+}
+
+#queue:hover span {
+  display: none
+}
+#queue:hover:before {
+  font-size: auto;
+  content: "A system used to approximate check in and security queue wait times";
+}
+
+#general:hover span {
+  display: none
+}
+#general:hover:before {
+  font-size: auto;
+  content: "General information about the user's flight and arrival/departure airport";
+}
+
+#ai:hover span {
+  display: none
+}
+#ai:hover:before {
+  font-size: auto;
+  content: "Personal AI airport assistant chatbot to help with general airport information";
+}
+
+#destinfo:hover span {
+  display: none
+}
+#destinfo:hover:before {
+  font-size: auto;
+  content: "Information about the destination's safety, social norms, and public transportation";
+}
+
+.ripple {
+   width: 5px;
+   height: 5px;
+   background-color: transparent;
+   position: fixed;
+   border-radius: 50%;
+   border: 0.2px solid #91dafe;
+}
+
+@keyframes ripple-effect {
+   to {
+      transform:scale(15);
+      opacity: 0.01;
+   }
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
