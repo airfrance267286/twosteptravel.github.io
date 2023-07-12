@@ -104,6 +104,14 @@ header {
   transition: all 0.2s;
 }
 
+.vidBorder{
+  width: 40%;
+  height: auto;
+  border: 10px solid black;
+  border-radius: 15px;
+  margin: auto;
+}
+
 input{
   font-size: 20px;
   font-family: Montserrat, sans-serif;
