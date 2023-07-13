@@ -63,7 +63,7 @@ header {
   position: sticky;
   -webkit-position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
   background-color: white;
   text-align: center;
   -webkit-backface-visibility: hidden;
@@ -103,13 +103,10 @@ header {
   padding: 8px;
   transition: all 0.2s;
 }
-
 .vidBorder{
-  width: 40%;
-  height: auto;
-  border: 10px solid black;
-  border-radius: 15px;
+  height: 100vh !important;
   margin: auto;
+  text-align: center;
 }
 
 input{
