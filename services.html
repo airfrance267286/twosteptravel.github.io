@@ -6,9 +6,6 @@
   <link rel="shortcut icon" href="logos/TWOSTEP S.png">
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <meta property="og:title" content="TwoStep - Terms of Service" />
-  <meta property="og:description" content="Making the most stressful part of travel quick and easy."/>
-  <meta property="og:image" content="https://raw.githubusercontent.com/airfrance267286/twosteptravel.github.io/main/logos/TWOSTEP%20S.png"/>
   <style>
     #listBox{
       border: 2px solid black;
@@ -130,11 +127,12 @@
     <div class="qbox" id="q4">
       <h1>How do I use the app?</h1>
       <h2>Tutorial</h2>
-      <div class="vidBorder">
-        <video width="100%" height="auto" controls>
+      <div class="vidBorder" style="position: relative">
+        <video height="100%" width="auto" style="z-index: 0; position:absolute; margin: auto; left: 0; right: 0;" controls>
           <source src="http://twosteptravel.af267.repl.co/DemoLong.mov" type="video/MP4"/>
           Your browser does not support the video tag.
         </video>
+        <img src="iphone14.png" style="position: absolute; top: -2%; height: 105%; z-index: 1; margin: auto; left: 0; right: 0; pointer-events: none;"/>
       </div>
       <h2>Airport map</h2>
       <p>Zoom in on a specific terminal to view terminal details. The map will display the locations of gates and restaurants throughout the terminal.</p>
