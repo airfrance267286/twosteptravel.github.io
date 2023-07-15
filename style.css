@@ -63,7 +63,7 @@ header {
   position: sticky;
   -webkit-position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 3;
   background-color: white;
   text-align: center;
   -webkit-backface-visibility: hidden;
@@ -264,23 +264,16 @@ textarea{
   position: fixed;
   right: 10px;
   bottom: 10px;
-  border-radius: 50%;
-  background-color: #61b3e4;
-  color: white;
-  width: 8vh;
+  width: auto;
   height: 8vh;
-  font-size: 4.2vh;
-  font-family: SFProRoundedRegular, Montserrat, sans-serif;
-  text-align: center;
+  transition: all 0.2s;
+  z-index: 2;
 }
 
 .helpButton:hover{
-  width: 10vh;
+  width: auto;
   height: 10vh;
-  font-size: 6vh;
-  background-color: #ffffff;
-  color: #61b3e4;
-  border-color: #61b3e4;
+  transition: all 0.2s;
 }
 
 .ripple {
