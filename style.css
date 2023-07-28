@@ -285,6 +285,52 @@ textarea{
    border: 0.2px solid #91dafe;
 }
 
+.donate{
+  width: 30vw;
+  height: 8vw;
+  font-size: 30px;
+  animation: textChange 3s ease infinite;
+  border: 5px solid #61b3e4;
+  color: #61b3e4;
+  font-weight: bold;
+  border-radius: 20px;
+}
+@keyframes textChange {
+  0% {
+		font-size: 30px;
+	}
+  50% {
+		font-size: 50px;
+	}
+	100% {
+		font-size: 30px;
+	}
+}
+.donate:hover {
+  background-image: radial-gradient(#77cfc0, #61b3e4, #4c6de5, #322eba);
+  background-size: 300% 300%;
+  animation: backgroundColorPalette 10s ease infinite;
+  border: none;
+  transition: all 0.2s;
+}
+@keyframes backgroundColorPalette {
+  0% {
+		background-position: 0% 0%;
+	}
+  25% {
+		background-position: 100% 0%;
+	}
+	50% {
+		background-position: 200% 200%;
+	}
+  50% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
 @keyframes ripple-effect {
    to {
       transform:scale(15);
